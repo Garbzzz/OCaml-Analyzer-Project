@@ -1,0 +1,9 @@
+(library
+  (name p4)
+  (modules lexer parser eval types utils)
+  (libraries str re)
+  (preprocess
+  (pps ppx_jane ppx_deriving.show ppx_inline_test ppx_assert)))
+(env
+  (dev
+    (flags (:standard -w -A))))
